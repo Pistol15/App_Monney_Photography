@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{{ title }}Monney Photography</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='css/image/logo_1.png')}}">
+</head>
+<body class="body">
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='css/image/logo_1.png') }}" alt="Logo Monney Photography">
+       <button id="openMenu"><img class="menu" src="{{ url_for('static', filename='css/image/Menu.png') }}" alt="Image menu"></button>
+
+       <div id="overlay">
+        <div id="menu">
+            <button id="closeMenu">&times;</button>
+            <ul>
+                <li><a id="lien" href="{{url_for('home')}}" >Home</a></li>
+                <li><a id="lien" href="{{url_for('portfolio', filename='portfolio.html')}}">Portfolio</a></li>
+            </ul>
+        </div>
+       </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <script src="{{ url_for('static', filename='js/style.js') }}"></script>
+</body>
+</html>
