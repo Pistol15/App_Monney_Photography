@@ -1,9 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a class="text">Portfolio</a>
-{% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio/portfolio.css') }}">
+<div class="text">Portfolio</div>
+<section class="gallery">
+    <a href="{{url_for('MotocrossBroc2025')}}">
+        <div class="card" style="background-image: url('{{ url_for('static', filename='css/image/Motocross_Broc_2025/Groupe_2.jpg') }}');">
+            <div class="card-overlay">
+                <h2>Motocross de Broc 2025</h2>
+            </div>
+        </div>
+    </a>
 
-<script src="{{ url_for('static', filename='js/style.js') }}"></script>
-</body>
-</html>
+    <a href="{{url_for('MotocrossTrey2025')}}">
+        <div class="card" style="background-image: url('{{ url_for('static', filename='css/image/Motocross_Trey_2025/Autre/Groupe.JPG') }}');">
+            <div class="card-overlay">
+                <h2>Motocross de Trey 2025</h2>
+            </div>
+        </div>
+    </a>
+
+    <a href="{{url_for('MotocrossCournillens2025')}}">
+        <div class="card" style="background-image: url('{{ url_for('static', filename='css/image/Motocross_de_Cournillens_2025/Moto#64/Moto#64-6.JPG') }}');">
+            <div class="card-overlay">
+                <h2>Motocross de Cournillens 2025</h2>
+            </div>
+        </div>
+    </a>
+
+    <a href="{{url_for('MotocrossSergey2025')}}">
+        <div class="card" style="background-image: url('{{ url_for('static', filename='css/image/Motocross_de_Sergey_2025/Moto#20/Moto#20-2.JPG') }}');">
+            <div class="card-overlay">
+                <h2>Motocross de Sergey 2025</h2>
+            </div>
+        </div>
+    </a>
+</section>
+
+{% endblock %}

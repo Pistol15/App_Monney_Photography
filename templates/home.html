@@ -1,15 +1,11 @@
 {% extends "base.html" %}
-
 {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 <section>
     <img class="me" src="{{ url_for('static', filename='css/image/Image_homepage.png')}}">
-    <a class="text">Bonjour, je me présente: je m’appele Nicolas Monney, je suis un photographe suisse passioné par les sports méchaniques (voiture, moto, monoplace). Je me suis petit à petit diriger vers la photographie de motocross au cours de l’année 2025 car c’est dans ce domaine que je m’épanouissais le plus.</br></br>
+    <div class="text">Bonjour, je me présente: je m’appele Nicolas Monney, je suis un photographe suisse passioné par les sports méchaniques (voiture, moto, monoplace). Je me suis petit à petit diriger vers la photographie de motocross au cours de l’année 2025 car c’est dans ce domaine que je m’épanouissais le plus.</br></br>
             Le matériel que j’utilise ce sont deux boitiers Canon le M50 Mark II et le 1300D accompagné principalement de mon objectif Tamron 18-400mm et mon canon ef 70-200mm f/4. </br></br>
             Je vous souhaite la bienvenue sur mon site et vous laisse aller observer mon travail dans mon portfolio.
-    </a>
+    </div>
 </section>
 {% endblock %}
-
-<script src="{{ url_for('static', filename='js/style.js') }}"></script>
-</body>
-</html>
